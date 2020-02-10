@@ -6,6 +6,7 @@ export function configure(config: FrameworkConfiguration) {
     PLATFORM.moduleName('./attributes/color'),
     PLATFORM.moduleName('./value-converters/upcase'),
     PLATFORM.moduleName('./binding-behaviors/primary-click'),
-    PLATFORM.moduleName('./elements/hello-world')
+      PLATFORM.moduleName('./elements/hello-world'),
+      PLATFORM.moduleName('./elements/jul-component')
   ]);
 }

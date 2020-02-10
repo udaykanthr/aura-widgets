@@ -1,4 +1,8 @@
 <template>
   <require from="./hello-world.css"></require>
-  <h3 class="hello-world">Hello world ${message}</h3>
+  <!-- <h3 class="hello-world">Hello world ${message}</h3> -->
+  <h1>Welcome to JUL component</h1>
+  <div class="row" repeat.for="d of julData">
+    <p>${d.type}</p>
+  </div>
 </template>

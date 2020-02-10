@@ -96,7 +96,20 @@
             "name": "aurelia-testing",
             "env": "dev"
           },
-          "text"
+            "text",
+	    "jquery",
+	    {
+		"name": "bootstrap",
+		"path": "../node_modules/bootstrap/dist",
+		"main": "js/bootstrap.bundle.min",
+		"deps": [
+		    "jquery"
+		],
+		"exports": "$",
+		"resources": [
+		    "css/bootstrap.css"
+		]
+	    }	    
         ]
       }
     ],

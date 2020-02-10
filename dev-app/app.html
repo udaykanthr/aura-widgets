@@ -1,27 +1,34 @@
 <template>
-  <h1>Hello, this is the dev app for plugin aurelia-ui-components</h1>
-  <p>This dev app is bundled to scripts/ folder (ignored in .gitignore). If you commit the bundle files to github, this app can serve as a <a href="https://pages.github.com" target="_blank">github page</a>!</p>
+<require from="bootstrap/css/bootstrap.css"></require>  
 
-  <p>Please read the <a href="README.md">README</a> file in your project for more information.</p>
+<div class="container">
+  <div class="row">
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+	<a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+	<a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+	<a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+	<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
 
-  <hr>
-  <h2>Custom element "hello-world"</h2>
-  <p>Usage:&nbsp;<code>&lt;hello-world message.bind="message"&gt;&lt;/hello-world&gt;</code></p>
-  <hello-world message.bind="message"></hello-world>
+  <div class="row">
+    <h1>Plugin aurelia-ui-components</h1>
 
-  <hr>
-  <h2>Custom attribute "color"</h2>
-  <p>Usage:&nbsp;<code>&lt;p color="green"&gt;In green&lt;/p&gt;</code></p>
-  <p color="green">In green</p>
 
-  <hr>
-  <h2>Value Converter "upcase"</h2>
-  <p>Usage:&nbsp;<code>\${message | upcase}</code></p>
-  <p>${message | upcase}</p>
+    <p>Usage:&nbsp;<code>&lt;jul-component message.bind="message"&gt;&lt;/jul-component&gt;</code></p>
+  </div>
 
-  <hr>
-  <h2>Binding Behavior "primaryClick"</h2>
-  <p>Usage:&nbsp;<code>&lt;button click.trigger="clicked() & primaryClick"&gt;&lt;/button&gt;</code></p>
-  <button click.trigger="clicked() & primaryClick">Only triggers on a primary button click or a touch on mobile device</button>
-
+  <div class="row">
+    <jul-component jobj.bind="jul"></jul-component>
+  </div>
+</div>
+  
 </template>
