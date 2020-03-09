@@ -1,8 +1,27 @@
 <template>
-  <require from="./hello-world.css"></require>
-  <!-- <h3 class="hello-world">Hello world ${message}</h3> -->
-  <h1>Welcome to JUL component</h1>
-  <div class="row" repeat.for="d of julData">
-    <p>${d.type}</p>
+  <require from="./jul-component.css"></require>
+
+  <!-- start JUL container -->
+  <div class="container">
+
+    <!-- start JUL ROW -->
+    <div class="row">
+      <div class="${d.col}" repeat.for="d of julData"> 
+	<!-- <p>${d.type}</p> -->
+	<div if.bind="d.type=='input'">
+
+	  <div class="form-group">
+	    <label if.bind="d.displayLabel" for="${d.elementId}">${d.displayLabel}</label>
+	    <input type="${d.elementType}" id="${d.elementId}" class="form-control ${d.class}" aria-describedby="${d.ariaDesc}" placeholder="${d.placeHolder}" value="${d.elementValue}"></input>
+	    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+	  </div>
+	  
+	</div>
+      </div>
+    </div>
+    <!-- stop JUL ROW -->
+
   </div>
+  <!-- stop JUL container   -->
+
 </template>

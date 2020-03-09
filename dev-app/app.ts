@@ -1,20 +1,33 @@
 export class App {
   public message: string = 'from Aurelia!';
-    public jul;
+    public julLoginForm;
 
     constructor() {
-	this.jul = [
+	this.julLoginForm = [
 	    {
-		type: "control"
+		type: "input",
+		col: "col-sm-12",
+		elementType: "text",
+		elementValue: "",
+		displayLabel: "Username",
+		placeHolder: "user name",
+		class: "btn btn-watning"
 	    },
 	    {
-		type: "input"
+		type: "input",
+		col: "col-sm-12",
+		elementType: "password",
+		elementValue: "",
+		displayLabel: "password",
+		placeHolder: "user name",
+		class: "btn btn-watning"
 	    },
 	    {
-		type: "control"
-	    },
-	    {
-		type: "control"
+		type: "input",
+		col: "col-sm-12",
+		elementType: "button",
+		elementValue: "Login",
+		class: "btn btn-primary"
 	    }
 	];
     }
