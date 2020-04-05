@@ -33,4 +33,14 @@ export class JulComponent {
 
 	
     }
+
+    onClick(element) {
+	if (element.action &&
+	    element.action == "onclick" &&
+	    element.eventListener) {
+	    if (typeof element.eventListener == "function" ) {
+		element.eventListener(this.julData);
+	    }
+	}
+    }
 }

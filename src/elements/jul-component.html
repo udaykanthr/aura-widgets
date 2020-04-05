@@ -12,7 +12,7 @@
 
 	  <div class="form-group">
 	    <label if.bind="d.displayLabel" for="${d.elementId}">${d.displayLabel}</label>
-	    <input type="${d.elementType}" id="${d.elementId}" class="form-control ${d.class}" aria-describedby="${d.ariaDesc}" placeholder="${d.placeHolder}" value="${d.elementValue}"></input>
+	    <input type="${d.elementType}" id="${d.elementId}" class="form-control ${d.class}" aria-describedby="${d.ariaDesc}" placeholder="${d.placeHolder}" value.bind="d.elementValue" click.delegate="onClick(d)"></input>
 	    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 	  </div>
 	  

@@ -27,13 +27,16 @@ export class App {
 		col: "col-sm-12",
 		elementType: "button",
 		elementValue: "Login",
-		class: "btn btn-primary"
+		class: "btn btn-primary",
+		action: "onclick",
+		eventListener: this.clicked
 	    }
 	];
     }
 
-  clicked() {
+  clicked(data) {
     // eslint-disable-next-line no-alert
+      console.log("data", data);
     alert('A primary button click or a touch');
   }
 }
